@@ -35,7 +35,7 @@ function Header({setSearchValue, setBasketSt, basketSt}) {
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
 				</button>
-				<SlBasket onClick={() => setBasketSt(true)} className='text-[1.7em] text-[#f24663] ' />
+				<SlBasket onClick={() => setBasketSt(!basketSt)} className='text-[1.7em] text-[#f24663] ' />
 				<HiMoon className='text-[1.7em] text-[#711b29] ' />
 				</div>
 			</div>

@@ -34,10 +34,10 @@ export default function () {
             <p className="text-sm dark:text-gray-600 py-[10px] ">{obj.instructions}</p>
             <div className='flex justify-between'>
             <ul className='py-[20px] text-[.9em] '>
-                {obj.ingredient.map(item => <li key={item} className='py-[5px]'>{item}</li>)}
+                {obj.ingredient.map((item, i )=> <li key={i} className='py-[5px]'>{item}</li>)}
             </ul>
             <ul>
-                {obj.quanty.map(item => <li key={item} className='py-[5px]'>{item}</li>)}
+                {obj.quanty.map((item , i)=> <li key={i} className='py-[5px]'>{item}</li>)}
             </ul>
             </div>
             
