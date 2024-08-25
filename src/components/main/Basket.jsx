@@ -2,14 +2,14 @@ import React from 'react'
 import { HiXMark } from "react-icons/hi2";
 
 
-export default function Basket() {
+export default function Basket({basketSt, setBasketSt}) {
 
     return (
 
-        <div className="container p-2 mx-auto rounded-md sm:p-4 dark:text-gray-800 dark:bg-gray-50">
+        <div onClick={(e) => {e.stopPropagation()}} className="container p-2 mx-auto rounded-md sm:p-4 dark:text-gray-800 dark:bg-gray-50">
             <div className='flex items-center justify-between'>
             <h2 className='p-[10px] text-[1.6em] font-bold'>Basket</h2>
-            <HiXMark className='text-[1.7em]'/>
+            <HiXMark onClick={() => setBasketSt(false)} className='text-[1.7em]'/>
             </div>
             <div className="overflow-x-auto">
                 <table className="min-w-full text-xs">

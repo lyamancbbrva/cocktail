@@ -4,7 +4,7 @@ import { getCocktailForLetter } from '../../config/api'
 import Cards from './Cards'
 import Basket from './Basket'
 
-export default function Main({searchValue, basketSt}) {
+export default function Main({searchValue, basketSt, setBasketSt}) {
 
   
   
@@ -17,14 +17,23 @@ export default function Main({searchValue, basketSt}) {
 
   return (
 
-    <main className='wrapper py-[20px]'>
-      <RandomCard />
-      {basketSt ? <Basket basketSt={basketSt} /> : ''}
-      <div className="md:flex justify-center py-[20px] flex-wrap items-center">
+    <main
+    onClick={() => {
+        basketSt ? setBasketSt(false) : ''
+      }}
+     className={` py-[20px] ${basketSt ? 'bg-black' : ''} `}>
+        <div className="wrapper">
+
+      {basketSt ? '' : <RandomCard />} 
+      {basketSt ? <Basket basketSt={basketSt} setBasketSt={setBasketSt} /> : ''}
+
+      <div className=' md:flex justify-center py-[20px] flex-wrap items-center'>
           {
           data && data.map(item => <Cards key={item} item={item}/>)
           }
       </div>
+        </div>
+      
     </main>
   )
 }

@@ -3,7 +3,7 @@ import { SlBasket } from "react-icons/sl";
 import { HiMoon } from "react-icons/hi2";
 
 
-function Header({setSearchValue}) {
+function Header({setSearchValue, setBasketSt, basketSt}) {
 
 	return (
 
@@ -35,7 +35,7 @@ function Header({setSearchValue}) {
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
 				</button>
-				<SlBasket className='text-[1.7em] text-[#f24663] ' />
+				<SlBasket onClick={() => setBasketSt(true)} className='text-[1.7em] text-[#f24663] ' />
 				<HiMoon className='text-[1.7em] text-[#711b29] ' />
 				</div>
 			</div>
